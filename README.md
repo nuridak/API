@@ -8,7 +8,12 @@
     - Gurman Toor - [GurmanToor](https://github.com/GurmanToor)
 
 ## API description    
-- API that gets Weather statistics from the Manitoba Weather database. Returns high temperature/low temperature/humidity/wind speed/pollen
+- The Weather MB API allows users to access previously collected weather data for cities located in Manitoba, Canada. Users can request weather data by providing a start date, end date and the name of a city located in Manitoba. The API will return available weather data collected for the specified city based on the dates provided. Data will be divided into specific days that range from the given start date to the given end date. The data returned includes:
+    - Average high and low temperatures across the given date range 
+    - High and low temperatures for each indivual date in the range
+    - Wind speed for each indivual date in the range
+    - Humidity and for each indivual date in the range
+    - Pollen levels for each individual date in the range  
 
 ## List of endpoints with parameters
  
