@@ -1,19 +1,13 @@
 # Weather MB API
 
-## GROUP INFO: 
-- Group Number: 02
-    - Nurida Karimbaeva - [nuridak](https://github.com/nuridak)
-    - AL Fahiyan Siyam - [alahiyansiyam](https://github.com/AlFahiyanSiyam)
-    - Felix Wedel - [WedelFelix](https://github.com/WedelFelix)
-    - Gurman Toor - [GurmanToor](https://github.com/GurmanToor)
-
 ## API description    
 - The Weather MB API allows users to access previously collected weather data for cities located in Manitoba, Canada. Users can request weather data by providing a start date, end date and the name of a city located in Manitoba. The API will return available weather data collected for the specified city based on the dates provided. Data will be divided into specific days that range from the given start date to the given end date. The data returned includes:
     - Average high and low temperatures across the given date range 
-    - High and low temperatures for each indivual date in the range
-    - Wind speed for each indivual date in the range
-    - Humidity and for each indivual date in the range
-    - Pollen levels for each individual date in the range  
+    - And for each individual date in the range:
+        - High and low temperatures 
+        - Wind speed 
+        - Humidity
+        - Pollen levels
 
 ## List of endpoints with parameters
  
@@ -22,33 +16,26 @@
         - endDate: in YYYY-MM-DD format; restricted to be before or equal to today
         - startDate: in YYYY-MM-DD format; restricted to be before or equal to endDate
         - city: should be any city/town/village within Manitoba
-    
 
-## Description of resources - formatted as JSON
-- Resources: one or two resources
+## Description of resources
+- The Endpoint returns a list of temperatures at a requested city for the specified period of time
+#### **JSON formatted example**
+```
 [
     {
         "results":
         {
             "City": cityName,
-            "StartDate": startDte,
-            "EndDate": endDte, 
-            "AverageHighTemperature": HighTemperature,
-            "AverageLowTemperature": LowTemperature,
+            "StartDate": startDate,
+            "EndDate": endDate, 
+            "AverageHighTemperature": averageHighTemperature,
+            "AverageLowTemperature": averageLowTemperature,
             [
                 {
-                    "date": date,
-                    "HighTemperature": HighTemperature,
-                    "LowTemperature": LowTemperature,
-                    "WindSpeed": speed,
-                    "Humidity": humidity,
-                    "Pollen": pollen
-                },
-                {
-                    "date": date,
-                    "HighTemperature": HighTemperature,
-                    "LowTemperature": LowTemperature,
-                    "WindSpeed": speed,
+                    "Date": date,
+                    "HighTemperature": highTemperature,
+                    "LowTemperature": lowTemperature,
+                    "WindSpeed": windSpeed,
                     "Humidity": humidity,
                     "Pollen": pollen
                 },
@@ -57,6 +44,7 @@
         }
     }
 ]
+```
 
 ## Sample request with sample response
 https://api.weather-mb.org/json?endDate=2022-11-12&startDate=2022-11-11&city=Winnipeg
