@@ -11,11 +11,11 @@
 
 ## List of endpoints with parameters
  
-- GET Weather: returns general weather information for the specified period of time at the specified city/town within Manitoba.
+- GET Weather: returns general weather information for the specified period of time at the specified city/town/village within Manitoba.
     - Parameters: 
-        - endDate: in YYYY-MM-DD format; restricted to be before or equal to today
-        - startDate: in YYYY-MM-DD format; restricted to be before or equal to endDate
-        - city: should be any city/town/village within Manitoba
+        - **endDate**(string): in YYYY-MM-DD format; restricted to be before or equal to today. If not present, date defaults to current date. Optional.
+        - **startDate**(string): in YYYY-MM-DD format; restricted to be before or equal to endDate. If not present, date defaults to current date. Optional.
+        - **city**(string): should be any city/town/village within Manitoba. Required.
 
 ## Description of resources
 - The Endpoint returns a list of temperatures at a requested city for the specified period of time
