@@ -10,38 +10,35 @@
         - Pollen levels
 
 ## List of endpoints with parameters
- 
-- GET Weather: returns general weather information for the specified period of time at the specified city/town/village within Manitoba.
+- GET Request: https://api.weather-mb.org/json
     - Parameters: 
-        - **endDate**(string): in YYYY-MM-DD format; restricted to be before or equal to today. If not present, date defaults to current date. Optional.
-        - **startDate**(string): in YYYY-MM-DD format; restricted to be before or equal to endDate. If not present, date defaults to current date. Optional.
+        - **endDate**(string): in YYYY-MM-DD format; restricted to be before or equal to today. If not present, date defaults to current date. Required.
+        - **startDate**(string): in YYYY-MM-DD format; restricted to be before or equal to endDate. If not present, date defaults to current date. Required.
         - **city**(string): should be any city/town/village within Manitoba. Required.
 
 ## Description of resources
-- The Endpoint returns a list of temperatures at a requested city for the specified period of time
+- The Endpoint returns an object with a list of temperatures at a requested city/town for the specified period of time. 
+
 #### **JSON formatted example**
 ```
 [
     {
-        "results":
-        {
-            "City": cityName,
-            "StartDate": startDate,
-            "EndDate": endDate, 
-            "AverageHighTemperature": averageHighTemperature,
-            "AverageLowTemperature": averageLowTemperature,
-            [
-                {
-                    "Date": date,
-                    "HighTemperature": highTemperature,
-                    "LowTemperature": lowTemperature,
-                    "WindSpeed": windSpeed,
-                    "Humidity": humidity,
-                    "Pollen": pollen
-                },
-                ...
-            ]
-        }
+        "City": cityName,
+        "StartDate": startDate,
+        "EndDate": endDate, 
+        "AverageHighTemperature": averageHighTemperature,
+        "AverageLowTemperature": averageLowTemperature,
+        [
+            {
+                "Date": date,
+                "HighTemperature": highTemperature,
+                "LowTemperature": lowTemperature,
+                "WindSpeed": windSpeed,
+                "Humidity": humidity,
+                "Pollen": pollen
+            },
+            ...
+        ]
     }
 ]
 ```
