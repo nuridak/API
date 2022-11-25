@@ -17,7 +17,7 @@
         - **city**(string): should be any city/town/village within Manitoba. Required.
 
 ## Description of resources
-- The Endpoint returns an object with a list of temperatures at a requested city/town for the specified period of time. 
+- Returns a list of temperatures at a requested city/town for the specified period of time. 
 
 #### **JSON formatted example**
 ```
