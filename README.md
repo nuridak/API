@@ -10,7 +10,7 @@
         - Pollen levels
 
 ## List of endpoints with parameters
-- Endpoint: https://api.weather-mb.org/json
+- Endpoint: https://api.weather-mb.org/weather
     - Parameters: 
         - **endDate**(string): in YYYY-MM-DD format; restricted to be before or equal to today. If not present, date defaults to current date. Required.
         - **startDate**(string): in YYYY-MM-DD format; restricted to be before or equal to endDate. If not present, date defaults to current date. Required.
@@ -44,7 +44,7 @@
 ```
 
 ## Sample request with sample response
-https://api.weather-mb.org/json?endDate=2022-11-12&startDate=2022-11-11&city=Winnipeg
+https://api.weather-mb.org/weather?endDate=2022-11-12&startDate=2022-11-11&city=Winnipeg
 
 [
     {
