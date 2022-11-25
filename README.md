@@ -10,7 +10,7 @@
         - Pollen levels
 
 ## List of endpoints with parameters
-- GET Request: https://api.weather-mb.org/json
+- Endpoint: https://api.weather-mb.org/json
     - Parameters: 
         - **endDate**(string): in YYYY-MM-DD format; restricted to be before or equal to today. If not present, date defaults to current date. Required.
         - **startDate**(string): in YYYY-MM-DD format; restricted to be before or equal to endDate. If not present, date defaults to current date. Required.
