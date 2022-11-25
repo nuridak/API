@@ -43,36 +43,41 @@
 ]
 ```
 
-## Sample request with sample response
+## Sample request 
+````
 https://api.weather-mb.org/weather?endDate=2022-11-12&startDate=2022-11-11&city=Winnipeg
+````
 
+## Sample response
+````
 [
+
     {
-        "results":
-        {
-            "City": "Winnipeg",
-            "StartDate": "2022-11-11",
-            "EndDate": "2022-11-12", 
-            "AverageHighTemperature": "14",
-            "AverageLowTemperature": "-4",
-            [
-                {
-                    "date": "2022-11-12",
-                    "HighTemperature": "13",
-                    "LowTemperature": "-5",
-                    "WindSpeed": "43",
-                    "Humidity": "50%",
-                    "Pollen": "Low"
-                },
-                {
-                    "date": "2022-11-11",
-                    "HighTemperature": "15",
-                    "LowTemperature": "-3",
-                    "WindSpeed": "76",
-                    "Humidity": "80%",
-                    "Pollen": "High"
-                }
-            ]
-        }
+        "City": "Winnipeg",
+        "StartDate": "2022-11-11",
+        "EndDate": "2022-11-12", 
+        "AverageHighTemperature": "14",
+        "AverageLowTemperature": "-4",
+        [
+            {
+                "date": "2022-11-12",
+                "HighTemperature": "13",
+                "LowTemperature": "-5",
+                "WindSpeed": "43",
+                "Humidity": "50%",
+                "Pollen": "Low"
+            },
+            {
+                "date": "2022-11-11",
+                "HighTemperature": "15",
+                "LowTemperature": "-3",
+                "WindSpeed": "76",
+                "Humidity": "80%",
+                "Pollen": "High"
+            }
+        ]
     }
+    
 ]
+
+````
