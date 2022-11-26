@@ -60,7 +60,7 @@ https://api.weather-mb.org/weather?endDate=2022-11-12&startDate=2022-11-11&city=
         "AverageLowTemperature": "-4",
         [
             {
-                "date": "2022-11-12",
+                "Date": "2022-11-12",
                 "HighTemperature": "13",
                 "LowTemperature": "-5",
                 "WindSpeed": "43",
@@ -68,7 +68,7 @@ https://api.weather-mb.org/weather?endDate=2022-11-12&startDate=2022-11-11&city=
                 "Pollen": "Low"
             },
             {
-                "date": "2022-11-11",
+                "Date": "2022-11-11",
                 "HighTemperature": "15",
                 "LowTemperature": "-3",
                 "WindSpeed": "76",
