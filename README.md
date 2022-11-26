@@ -4,6 +4,7 @@
 - The Weather MB API allows users to access previously collected weather data for cities located in Manitoba, Canada. Users can request weather data by providing a start date, end date and the name of a city located in Manitoba. The API will return available weather data collected for the specified city based on the dates provided. Data will be divided into specific days that range from the given start date to the given end date. The data returned includes:
     - Average high and low temperatures across the given date range 
     - And for each individual date in the range:
+        - Date
         - High and low temperatures 
         - Wind speed 
         - Humidity
