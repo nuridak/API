@@ -25,14 +25,14 @@
 {
     "response": {
         "city": cityName,
-        "startDate": startDate(yyyy/mm/dd),
-        "endDate": endDate(yyyy/mm/dd), 
+        "startDate": startDate("yyyy/mm/dd"),
+        "endDate": endDate("yyyy/mm/dd"), 
         "averageHighTemperature": averageHighTemperature(°C),
         "averageLowTemperature": averageLowTemperature(°C),
         "dailyTemperatures":
         [
             {
-                "date": date(yyyy/mm/dd),
+                "date": date("yyyy/mm/dd"),
                 "highTemperature": highTemperature(°C),
                 "lowTemperature": lowTemperature(°C),
                 "windSpeed": windSpeed(km/h),
