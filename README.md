@@ -23,25 +23,26 @@
 #### **JSON formatted example**
 ```
 {
-    {
-        "City": cityName,
-        "StartDate": startDate,
-        "EndDate": endDate, 
-        "AverageHighTemperature": averageHighTemperature,
-        "AverageLowTemperature": averageLowTemperature,
+    "response": {
+        "city": cityName,
+        "startDate": startDate(yyyy/mm/dd),
+        "endDate": endDate(yyyy/mm/dd), 
+        "averageHighTemperature": averageHighTemperature(°C),
+        "averageLowTemperature": averageLowTemperature(°C),
         "dailyTemperatures":
         [
             {
-                "Date": date,
-                "HighTemperature": highTemperature,
-                "LowTemperature": lowTemperature,
-                "WindSpeed": windSpeed,
-                "Humidity": humidity,
-                "Pollen": pollen
+                "date": date(yyyy/mm/dd),
+                "highTemperature": highTemperature(°C),
+                "lowTemperature": lowTemperature(°C),
+                "windSpeed": windSpeed(km/h),
+                "humidity": humidity(%),
+                "pollen": pollenLevel
             },
             ...
         ]
-    }
+    },
+    "status": status
 }
 ```
 
@@ -53,33 +54,34 @@ https://api.weather-mb.org/weather?endDate=2022-11-12&startDate=2022-11-11&city=
 ## Sample response
 ````
 {
-
-    {
-        "City": "Winnipeg",
-        "StartDate": "2022-11-11",
-        "EndDate": "2022-11-12", 
-        "AverageHighTemperature": "14",
-        "AverageLowTemperature": "-4",
-        "dailyTemperatures":
-        [
-            {
-                "Date": "2022-11-12",
-                "HighTemperature": "13",
-                "LowTemperature": "-5",
-                "WindSpeed": "43",
-                "Humidity": "50%",
-                "Pollen": "Low"
-            },
-            {
-                "Date": "2022-11-11",
-                "HighTemperature": "15",
-                "LowTemperature": "-3",
-                "WindSpeed": "76",
-                "Humidity": "80%",
-                "Pollen": "High"
-            }
-        ]
-    }
+   
+    "response": {
+            "city": "Winnipeg",
+            "startDate": "2022-11-11",
+            "endDate": "2022-11-12", 
+            "averageHighTemperature": "14",
+            "averageLowTemperature": "-4",
+            "dailyTemperatures":
+            [
+                {
+                    "date": "2022-11-12",
+                    "highTemperature": 13,
+                    "lowTemperature": -5,
+                    "windSpeed": 43,
+                    "humidity": 50,
+                    "pollen": "Low"
+                },
+                {
+                    "date": "2022-11-11",
+                    "highTemperature": 15,
+                    "lowTemperature": -3,
+                    "windSpeed": 76,
+                    "humidity": 80,
+                    "pollen": "High"
+                }
+            ]
+    },
+    "status": "success"
 }
 
 ````
