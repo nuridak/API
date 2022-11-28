@@ -59,8 +59,8 @@ https://api.weather-mb.org/weather?endDate=2022-11-12&startDate=2022-11-11&city=
             "city": "Winnipeg",
             "startDate": "2022-11-11",
             "endDate": "2022-11-12", 
-            "averageHighTemperature": "14",
-            "averageLowTemperature": "-4",
+            "averageHighTemperature": 14,
+            "averageLowTemperature": -4,
             "dailyTemperatures":
             [
                 {
