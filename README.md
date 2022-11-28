@@ -22,13 +22,14 @@
 
 #### **JSON formatted example**
 ```
-[
+{
     {
         "City": cityName,
         "StartDate": startDate,
         "EndDate": endDate, 
         "AverageHighTemperature": averageHighTemperature,
         "AverageLowTemperature": averageLowTemperature,
+        "dailyTemperatures":
         [
             {
                 "Date": date,
@@ -41,7 +42,7 @@
             ...
         ]
     }
-]
+}
 ```
 
 ## Sample request 
@@ -51,7 +52,7 @@ https://api.weather-mb.org/weather?endDate=2022-11-12&startDate=2022-11-11&city=
 
 ## Sample response
 ````
-[
+{
 
     {
         "City": "Winnipeg",
@@ -59,6 +60,7 @@ https://api.weather-mb.org/weather?endDate=2022-11-12&startDate=2022-11-11&city=
         "EndDate": "2022-11-12", 
         "AverageHighTemperature": "14",
         "AverageLowTemperature": "-4",
+        "dailyTemperatures":
         [
             {
                 "Date": "2022-11-12",
@@ -78,7 +80,6 @@ https://api.weather-mb.org/weather?endDate=2022-11-12&startDate=2022-11-11&city=
             }
         ]
     }
-    
-]
+}
 
 ````
