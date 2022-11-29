@@ -54,7 +54,6 @@ https://api.weather-mb.org/weather?endDate=2022-11-12&startDate=2022-11-11&city=
 ## Sample response
 ````
 {
-   
     "response": {
             "city": "Winnipeg",
             "startDate": "2022-11-11",
